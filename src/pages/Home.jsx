@@ -1,8 +1,21 @@
 import React from 'react'
+import Main from '../components/section/Main'
+import Today from '../components/contents/Today'
+import Music from '../components/contents/Music'
+import VideoSlider from '../components/video/VideoSlider'
+import { movieText } from '../data/movie'
+import { BookText } from '../data/book'
+import { AnimeText} from '../data/anime'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Main>
+      <Today/>
+      <Music/>
+      <VideoSlider videos={movieText} title='😍 추천 영화입니다' id='movie'/>
+      <VideoSlider videos={BookText} title='😎 추천 도서입니다' id='book'/>
+      <VideoSlider videos={AnimeText} title='😊 추천 애니입니다' id='anime'/>
+    </Main>
   )
 }
 
